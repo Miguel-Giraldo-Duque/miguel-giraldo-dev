@@ -32,7 +32,7 @@ const tagAnimation = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.5, // Delay escalonado (0.15s entre cada tag)
+      delay: i * 0.2, // Delay escalonado (0.15s entre cada tag)
       duration: 0.5,
       ease: "easeOut",
     },
@@ -231,7 +231,11 @@ function App() {
                 {" "}
                 full-stack developer with 1+ years of experience . Currently
                 working at quantum computing startup{" "}
-                <a href="https://www.linkedin.com/company/qnow-tech/posts/?feedView=all">
+                <a
+                  href="https://www.linkedin.com/company/qnow-tech/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Qnow
                 </a>
               </strong>
@@ -241,10 +245,18 @@ function App() {
           </motion.p>
 
           <div className="presentation__info__social">
-            <a href="https://www.linkedin.com/in/miguel-giraldo-duke-5a680b299/">
+            <a
+              href="https://www.linkedin.com/in/miguel-giraldo-duke-5a680b299/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="./linkedin.svg" alt="LinkedIn" />
             </a>
-            <a href="https://github.com/Miguel-Giraldo-Duque">
+            <a
+              href="https://github.com/Miguel-Giraldo-Duque"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="./github.svg" alt="GitHub" />
             </a>
           </div>
