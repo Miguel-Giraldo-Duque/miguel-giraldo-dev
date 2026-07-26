@@ -114,7 +114,7 @@ function App() {
     },
     {
       id: 2,
-      title: "AI Concept Visuals (Freelance Frontend Developer)",
+      title: "AI Concept Visuals (Contractor Frontend Developer)",
       description:
         "Created a key visual for Alejandro Giraldo Londoño’s talk, demonstrating AI’s seamless transformation into actionable knowledge. The design framed this cognitive shift as an interactive journey—making abstract ideas tangible and emphasizing human-centric exploration.",
       image: "./particles2.webp",
@@ -128,7 +128,7 @@ function App() {
     },
     {
       id: 3,
-      title: "Andrés Giraldo Portfolio (Freelance Frontend Developer)",
+      title: "Andrés Giraldo Portfolio (Contractor Frontend Developer)",
       description:
         "Built responsive landing page components with UX-focused design, leveraging HTML/CSS to strengthen brand identity. Enhanced Andrés’ client conversion rates by 30% through fluid animations and intuitive interfaces.",
       image: "./case-andres.webp",
