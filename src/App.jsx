@@ -143,6 +143,99 @@ function App() {
         },
       ],
     },
+    {
+      id: 4,
+      title: "Qnow Space",
+      image: "./qnow-space.webp",
+      description:
+        "Built and shipped QnowTech’s corporate site on Next.js App Router + Sanity CMS—live content editing, knowledge-graph visualization for fintech trust cases, and GTM analytics. Public face of Qnow’s product work alongside private UDA delivery.",
+      projectLink: "https://qnow.space/",
+      tags: [
+        {
+          name: "React",
+          icon: {
+            url: "./react-logo-react.svg",
+            alt: "React logo",
+          },
+        },
+        {
+          name: "Node.js",
+          icon: {
+            url: "./icon-js-square.svg",
+            alt: "Node.js logo",
+          },
+        },
+        {
+          name: "HTML",
+          icon: {
+            url: "./html.svg",
+            alt: "Html logo",
+          },
+        },
+      ],
+    },
+    {
+      id: 5,
+      title: "BTZ Sport",
+      image: "./btz-sport.webp",
+      description:
+        "Headless e-commerce storefront for sustainable fashion brand BTZ—Next.js + Shopify GraphQL with size-aware cart, WhatsApp-assisted checkout, sustainability impact metrics, and Spanish/Colombia localization (es-CO, COP) on Vercel.",
+      projectLink: "https://www.btzsport.com/",
+      tags: [
+        {
+          name: "React",
+          icon: {
+            url: "./react-logo-react.svg",
+            alt: "React logo",
+          },
+        },
+        {
+          name: "Node.js",
+          icon: {
+            url: "./icon-js-square.svg",
+            alt: "Node.js logo",
+          },
+        },
+        {
+          name: "ux/ui",
+          icon: {
+            url: "./diseño.svg",
+            alt: "UX/UI logo",
+          },
+        },
+      ],
+    },
+    {
+      id: 6,
+      title: "Pasaporte Circular",
+      image: "./pasaporte-circular.webp",
+      description:
+        "Digital garment passport for circular fashion in Latin America—Next.js + TypeScript flows that surface material composition, ownership history, and impact KPIs, plus circular actions (repair, exchange, recycle) for registered garments.",
+      projectLink: "https://dpp-ui-omega.vercel.app/login",
+      tags: [
+        {
+          name: "React",
+          icon: {
+            url: "./react-logo-react.svg",
+            alt: "React logo",
+          },
+        },
+        {
+          name: "Node.js",
+          icon: {
+            url: "./icon-js-square.svg",
+            alt: "Node.js logo",
+          },
+        },
+        {
+          name: "HTML",
+          icon: {
+            url: "./html.svg",
+            alt: "Html logo",
+          },
+        },
+      ],
+    },
   ];
 
   const tags = [
