@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local commit workflow artifacts
+cambios.md
+commit_message.txt
+commit_file.txt
+commit-message.txt
