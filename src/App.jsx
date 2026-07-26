@@ -73,77 +73,7 @@ function App() {
         },
       ],
     },
-    {
-      id: 2,
-      title: "AI Concept Visuals (Freelance Frontend Developer)",
-      description:
-        "Created a key visual for Alejandro Giraldo Londoño’s talk, demonstrating AI’s seamless transformation into actionable knowledge. The design framed this cognitive shift as an interactive journey—making abstract ideas tangible and emphasizing human-centric exploration.",
-      image: "./particles2.webp",
-      projectLink: "https://morhp-particles.vercel.app/",
-      tags: [
-        {
-          name: "React",
-          icon: {
-            url: "./react-logo-react.svg",
-            alt: "React logo",
-          },
-        },
-        {
-          name: "HTML",
-          icon: {
-            url: "./html.svg",
-            alt: "Html logo",
-          },
-        },
-
-        {
-          name: "ux/ui",
-          icon: {
-            url: "./diseño.svg",
-            alt: "UX/UI logo",
-          },
-        },
-        {
-          name: "Three.js",
-          icon: {
-            url: "./Three.js.svg",
-            alt: "Three.js logo",
-          },
-        },
-      ],
-    },
-    {
-      id: 3, // Fixed duplicate ID (previously "id: 2")
-      title: "Andrés Giraldo Portfolio (Freelance Frontend Developer)",
-      description:
-        "Built responsive landing page components with UX-focused design, leveraging HTML/CSS to strengthen brand identity. Enhanced Andrés’ client conversion rates by 30% through fluid animations and intuitive interfaces.",
-      image: "./case-andres.webp",
-      projectLink: "https://ambiguous-darlings-317556.framer.app/Vercion-final",
-      tags: [
-        {
-          name: "React",
-          icon: {
-            url: "./react-logo-react.svg",
-            alt: "React logo",
-          },
-        },
-        {
-          name: "ux/ui",
-          icon: {
-            url: "./diseño.svg",
-            alt: "UX/UI logo",
-          },
-        },
-        {
-          name: "HTML",
-          icon: {
-            url: "./html.svg",
-            alt: "Html logo",
-          },
-        },
-      ],
-    },
-    {
+     {
       id: 4,
       title: "Qnow Space",
       image: "./qnow-space.webp",
@@ -236,6 +166,76 @@ function App() {
         },
       ],
     },
+    {
+      id: 2,
+      title: "AI Concept Visuals (Freelance Frontend Developer)",
+      description:
+        "Created a key visual for Alejandro Giraldo Londoño’s talk, demonstrating AI’s seamless transformation into actionable knowledge. The design framed this cognitive shift as an interactive journey—making abstract ideas tangible and emphasizing human-centric exploration.",
+      image: "./particles2.webp",
+      projectLink: "https://morhp-particles.vercel.app/",
+      tags: [
+        {
+          name: "React",
+          icon: {
+            url: "./react-logo-react.svg",
+            alt: "React logo",
+          },
+        },
+        {
+          name: "HTML",
+          icon: {
+            url: "./html.svg",
+            alt: "Html logo",
+          },
+        },
+
+        {
+          name: "ux/ui",
+          icon: {
+            url: "./diseño.svg",
+            alt: "UX/UI logo",
+          },
+        },
+        {
+          name: "Three.js",
+          icon: {
+            url: "./Three.js.svg",
+            alt: "Three.js logo",
+          },
+        },
+      ],
+    },
+    {
+      id: 3, // Fixed duplicate ID (previously "id: 2")
+      title: "Andrés Giraldo Portfolio (Freelance Frontend Developer)",
+      description:
+        "Built responsive landing page components with UX-focused design, leveraging HTML/CSS to strengthen brand identity. Enhanced Andrés’ client conversion rates by 30% through fluid animations and intuitive interfaces.",
+      image: "./case-andres.webp",
+      projectLink: "https://ambiguous-darlings-317556.framer.app/Vercion-final",
+      tags: [
+        {
+          name: "React",
+          icon: {
+            url: "./react-logo-react.svg",
+            alt: "React logo",
+          },
+        },
+        {
+          name: "ux/ui",
+          icon: {
+            url: "./diseño.svg",
+            alt: "UX/UI logo",
+          },
+        },
+        {
+          name: "HTML",
+          icon: {
+            url: "./html.svg",
+            alt: "Html logo",
+          },
+        },
+      ],
+    }
   ];
 
   const tags = [
