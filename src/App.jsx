@@ -58,16 +58,44 @@ function App() {
           },
         },
         {
-          name: "HTML",
+          name: "TypeScript",
           icon: {
-            url: "./html.svg",
-            alt: "Html logo",
+            url: "./typescript.svg",
+            alt: "TypeScript logo",
+          },
+        },
+        {
+          name: "Next.js",
+          icon: {
+            url: "./nextjs.svg",
+            alt: "Next.js logo",
+          },
+        },
+        {
+          name: "Cypress",
+          icon: {
+            url: "./cypress.svg",
+            alt: "Cypress logo",
+          },
+        },
+        {
+          name: "Vitest",
+          icon: {
+            url: "./vitest.svg",
+            alt: "Vitest logo",
+          },
+        },
+        {
+          name: "CSS",
+          icon: {
+            url: "./css.svg",
+            alt: "CSS logo",
           },
         },
         {
           name: "Node.js",
           icon: {
-            url: "./icon-js-square.svg",
+            url: "./nodejs.svg",
             alt: "Node.js logo",
           },
         },
@@ -82,36 +110,19 @@ function App() {
       projectLink: "https://qnow.space/",
       tags: [
         {
-          name: "React",
+          name: "Next.js",
           icon: {
-            url: "./react-logo-react.svg",
-            alt: "React logo",
+            url: "./nextjs.svg",
+            alt: "Next.js logo",
           },
         },
         {
-          name: "Node.js",
+          name: "TypeScript",
           icon: {
-            url: "./icon-js-square.svg",
-            alt: "Node.js logo",
+            url: "./typescript.svg",
+            alt: "TypeScript logo",
           },
         },
-        {
-          name: "HTML",
-          icon: {
-            url: "./html.svg",
-            alt: "Html logo",
-          },
-        },
-      ],
-    },
-    {
-      id: 5,
-      title: "BTZ Sport",
-      image: "./btz-sport.webp",
-      description:
-        "Headless e-commerce storefront for sustainable fashion brand BTZ—Next.js + Shopify GraphQL with size-aware cart, WhatsApp-assisted checkout, sustainability impact metrics, and Spanish/Colombia localization (es-CO, COP) on Vercel.",
-      projectLink: "https://www.btzsport.com/",
-      tags: [
         {
           name: "React",
           icon: {
@@ -120,14 +131,7 @@ function App() {
           },
         },
         {
-          name: "Node.js",
-          icon: {
-            url: "./icon-js-square.svg",
-            alt: "Node.js logo",
-          },
-        },
-        {
-          name: "ux/ui",
+          name: "UX/UI",
           icon: {
             url: "./diseño.svg",
             alt: "UX/UI logo",
@@ -136,8 +140,39 @@ function App() {
       ],
     },
     {
+      id: 5,
+      title: "BTZ Sport (Contractor)",
+      image: "./btz-sport.webp",
+      description:
+        "Headless e-commerce storefront for sustainable fashion brand BTZ—Next.js + Shopify GraphQL with size-aware cart, WhatsApp-assisted checkout, sustainability impact metrics, and Spanish/Colombia localization (es-CO, COP) on Vercel.",
+      projectLink: "https://www.btzsport.com/",
+      tags: [
+        {
+          name: "GraphQL",
+          icon: {
+            url: "./graphql.svg",
+            alt: "GraphQL logo",
+          },
+        },
+        {
+          name: "Next.js",
+          icon: {
+            url: "./nextjs.svg",
+            alt: "Next.js logo",
+          },
+        },
+        {
+          name: "React",
+          icon: {
+            url: "./react-logo-react.svg",
+            alt: "React logo",
+          },
+        },
+      ],
+    },
+    {
       id: 6,
-      title: "Pasaporte Circular",
+      title: "Closet dinamico (Contractor)",
       image: "./pasaporte-circular.webp",
       description:
         "Digital garment passport for circular fashion in Latin America—Next.js + TypeScript flows that surface material composition, ownership history, and impact KPIs, plus circular actions (repair, exchange, recycle) for registered garments.",
@@ -153,15 +188,15 @@ function App() {
         {
           name: "Node.js",
           icon: {
-            url: "./icon-js-square.svg",
+            url: "./nodejs.svg",
             alt: "Node.js logo",
           },
         },
         {
-          name: "HTML",
+          name: "Next.js",
           icon: {
-            url: "./html.svg",
-            alt: "Html logo",
+            url: "./nextjs.svg",
+            alt: "Next.js logo",
           },
         },
       ],
@@ -247,52 +282,52 @@ function App() {
       },
     },
     {
-      name: "ux/ui",
+      name: "TypeScript",
+      icon: {
+        url: "./typescript.svg",
+        alt: "TypeScript logo",
+      },
+    },
+    {
+      name: "Next.js",
+      icon: {
+        url: "./nextjs.svg",
+        alt: "Next.js logo",
+      },
+    },
+    {
+      name: "Node.js",
+      icon: {
+        url: "./nodejs.svg",
+        alt: "Node.js logo",
+      },
+    },
+    {
+      name: "UX/UI",
       icon: {
         url: "./diseño.svg",
         alt: "UX/UI logo",
       },
     },
     {
-      name: "HTML ",
+      name: "Cypress",
       icon: {
-        url: "./html.svg",
-        alt: "Html logo",
+        url: "./cypress.svg",
+        alt: "Cypress logo",
       },
     },
     {
-      name: "Javascript ",
+      name: "Vitest",
       icon: {
-        url: "./icon-js-square.svg",
-        alt: "Javascript logo",
-      },
-    },
-    {
-      name: "Node.js",
-      icon: {
-        url: "./icon-js-square.svg",
-        alt: "Node.js logo",
-      },
-    },
-    {
-      name: "MySql ",
-      icon: {
-        url: "./mysql.svg",
-        alt: "MySql logo",
-      },
-    },
-    {
-      name: "Three.js",
-      icon: {
-        url: "./Three.js.svg",
-        alt: "Three.js logo",
+        url: "./vitest.svg",
+        alt: "Vitest logo",
       },
     },
     {
       name: "CSS",
       icon: {
         url: "./css.svg",
-        alt: "CSS.js logo",
+        alt: "CSS logo",
       },
     },
   ];
@@ -322,19 +357,21 @@ function App() {
             <span className="highlight">
               <strong>
                 {" "}
-                full-stack developer with 1+ years of experience . Currently
-                working at quantum computing startup{" "}
-                <a
-                  href="https://www.linkedin.com/company/qnow-tech/posts/?feedView=all"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Qnow
-                </a>
+                Full Stack Developer with +4 years of experience and +2 years as
+                a UX/UI designer
               </strong>
             </span>
-            , I build end-to-end products while practicing calisthenics in my
-            free time.
+            . I combine engineering and design to build end-to-end products—from
+            interface and business logic to integration and deployment—across
+            sustainable fashion e-commerce and quantum computing at{" "}
+            <a
+              href="https://www.linkedin.com/company/qnow-tech/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Qnow
+            </a>
+            .
           </motion.p>
 
           <div className="presentation__info__social">
