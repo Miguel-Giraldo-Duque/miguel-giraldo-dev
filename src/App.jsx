@@ -88,7 +88,7 @@ function App() {
     },
     {
       id: 5,
-      title: "BTZ Sport (Contractor)",
+      title: "BTZ Sport (Contractor Full Stack Developer)",
       image: "./btz-sport.webp",
       description:
         "Headless e-commerce storefront for sustainable fashion brand BTZ—Next.js + Shopify GraphQL with size-aware cart, WhatsApp-assisted checkout, sustainability impact metrics, and Spanish/Colombia localization (es-CO, COP) on Vercel.",
@@ -101,7 +101,7 @@ function App() {
     },
     {
       id: 6,
-      title: "Closet dinamico (Contractor)",
+      title: "Closet dinamico (Contractor Full Stack Developer)",
       image: "./pasaporte-circular.webp",
       description:
         "Digital garment passport for circular fashion in Latin America—Next.js + TypeScript flows that surface material composition, ownership history, and impact KPIs, plus circular actions (repair, exchange, recycle) for registered garments.",
@@ -184,7 +184,8 @@ function App() {
             </span>
             . I combine engineering and design to build end-to-end products—from
             interface and business logic to integration and deployment—across
-            sustainable fashion e-commerce and quantum computing at{" "}
+            sustainable fashion e-commerce as well as quantum computing and
+            knowledge mining at{" "}
             <a
               href="https://www.linkedin.com/company/qnow-tech/posts/?feedView=all"
               target="_blank"
