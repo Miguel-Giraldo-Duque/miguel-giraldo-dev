@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Portfolio",
+    "description": "Portfolio of Miguel Angel Giraldo Duque, Full Stack developer and UX/UI designer. Projects, reviews, and contact."
+  },
+  "locale": {
+    "label": "Language"
+  },
+  "nav": {
+    "label": "Sections",
+    "work": "Projects",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  },
+  "hero": {
+    "before": "Born in Colombia and based in Buenos Aires, Argentina, I’m a",
+    "highlight": "Full Stack Developer with +4 years of experience and +2 years as a UX/UI designer",
+    "after": ". I combine engineering and design to build end-to-end products—from interface and business logic to integration and deployment—across sustainable fashion e-commerce as well as quantum computing and knowledge mining at"
+  },
+  "projects": {
+    "kicker": "Projects",
+    "titleLine1": "What I Learn and",
+    "titleLine2Before": "Apply to the",
+    "titleHighlight": "World",
+    "private": "Private",
+    "newTab": " (opens in a new tab)"
+  },
+  "reviews": {
+    "titleLead": "Nice things",
+    "titleHighlight": "people",
+    "titleTail": "say",
+    "titleSecond": "about my work",
+    "window": "testimonial",
+    "previous": "Previous review",
+    "next": "Next review",
+    "position": "Review position",
+    "of": "of",
+    "live": "{author}, {current} of {count}"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Want to talk about a project?",
+    "lead": "I build landing pages for local businesses: fast, clearly priced, and ready to be found by people and by AI search (GEO/AEO).",
+    "fullName": "Full name",
+    "company": "Company",
+    "email": "Email",
+    "message": "Message",
+    "honeypot": "Website",
+    "consentBefore": "I accept the",
+    "consentLink": "privacy policy",
+    "consentAfter": "and the use of this data to answer my inquiry.",
+    "sending": "Sending…",
+    "submit": "Send message",
+    "successTitle": "Done.",
+    "successBody": "I got your message and I’ll reply soon.",
+    "another": "Send another message",
+    "errors": {
+      "name_short": "Enter your full name.",
+      "name_long": "That name is too long.",
+      "company_long": "The company name can’t be longer than 120 characters.",
+      "email_required": "Enter an email.",
+      "email_invalid": "Enter a valid email.",
+      "email_long": "That email is too long.",
+      "message_short": "Tell me a bit more, at least 10 characters.",
+      "message_long": "That message is too long.",
+      "privacy_required": "You need to accept the privacy policy.",
+      "unreadable": "I couldn’t read the message.",
+      "send_failed": "I couldn’t send the message. Try again in a few minutes.",
+      "network": "I couldn’t send the message. Check your connection and try again."
+    }
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "description": "How the contact form on Miguel Angel Giraldo Duque’s site handles personal data.",
+    "draft": "Draft pending legal review.",
+    "back": "Back to contact",
+    "updated": "Last updated: 29 October 2026.",
+    "intro": "This page explains which data the contact form on this site asks for and what it is used for. It is a draft written for a commercial inquiry in Argentina, under Personal Data Protection Law 25,326 and regulatory decree 1558/2001. It is not a lawyer’s advice.",
+    "responsibleTitle": "Controller",
+    "responsibleBefore": "Miguel Angel Giraldo Duque, independent developer, based in Buenos Aires, Argentina. The site is",
+    "rightsRequest": "To ask for access, correction, an update, or deletion, use the contact form on this site and say which right you want to exercise.",
+    "dataTitle": "What data is asked for",
+    "dataIntro": "The form may keep this data, which you provide voluntarily:",
+    "dataItems": ["Full name", "Company, if you include one", "Email", "The message you write"],
+    "dataSensitive": "The form does not ask for sensitive data under section 2 of Law 25,326 (for example health, political opinions, or beliefs). If you put that in the message, it is not needed: a name, an email, and the project are enough to reply.",
+    "dataHoneypot": "There is a hidden field people do not fill in. It filters automated submissions. If it contains text, the message is discarded.",
+    "purposeTitle": "What it is used for",
+    "purpose": "The only purpose is to answer your inquiry and, if it applies, prepare a quote for a landing page or other work you ask for. I do not sell this data and I do not use it for third-party advertising.",
+    "consent": "The basis is your consent, which you give by checking the box on the form. Without that consent the message is not sent. If you do not want to leave this data, you can write to me on LinkedIn, linked from the home page.",
+    "retentionTitle": "How long it is kept",
+    "retention": "It is kept for as long as needed to reply and follow up on that inquiry, with a suggested limit of 24 months from the last message, unless you ask for deletion sooner or a rule requires keeping it longer.",
+    "logs": "This version of the site has no database of its own. The message is prepared to be sent by email. Until that sending is connected to a provider, the server may keep a copy in its technical logs so the inquiry can be seen during development. When the provider is chosen, this sentence has to be updated.",
+    "processorsTitle": "Who else can see it",
+    "hosting": "The site is hosted by a hosting provider (planned: Vercel). That provider processes the technical request of the form.",
+    "transfer": "Email does not go out to a specific provider yet. When it is connected, the message will pass through that service (for example Resend, in the United States, or an SMTP service such as a personal mailbox). That can be an international transfer. Section 12 of Law 25,326 requires the country or the recipient to offer an adequate level of protection, or another valid basis. The provider and the basis will be filled in on this page before sending is turned on.",
+    "rightsTitle": "Your rights",
+    "rights": "You can ask for access to your data (section 14) and for it to be corrected, updated, or deleted (section 16). You can also withdraw consent for future uses. Deletion does not erase messages that were already needed to answer an inquiry in progress, but it stops new uses.",
+    "authorityBefore": "The supervisory authority is the Agency for Access to Public Information (AAIP), National Directorate for Personal Data Protection:",
+    "securityTitle": "Security",
+    "security": "I use reasonable measures so the form is not left open to automated submissions and so this data is not published on the site. No transmission over the internet is impossible to intercept.",
+    "minorsTitle": "Minors",
+    "minors": "The site and the form are not directed at minors.",
+    "changesTitle": "Changes",
+    "changes": "If this policy changes, the new version is published at this same address with a new date."
+  }
+}
