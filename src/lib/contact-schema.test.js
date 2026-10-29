@@ -4,7 +4,7 @@ import { contactSchema } from "./contact-schema.js";
 
 const valid = {
   fullName: "Ana Pérez",
-  company: "El Viejo Buzón",
+  company: "Estudio Norte",
   email: "ana@example.com",
   message: "Quiero una landing para el bar.",
   privacyAccepted: true,

@@ -1,6 +1,6 @@
 /**
  * Projects rendered by the work list.
- * Set `image` to a file in /public (for example "/el-viejo-buzon.webp").
+ * Set `image` to a file in /public. Leave it null to show an initials slot.
  * Leave `href` null when there is no public URL.
  */
 export const projects = [
@@ -31,16 +31,6 @@ export const projects = [
       "Headless e-commerce storefront for sustainable fashion brand BTZ—Next.js + Shopify GraphQL with size-aware cart, WhatsApp-assisted checkout, sustainability impact metrics, and Spanish/Colombia localization (es-CO, COP) on Vercel.",
     href: "https://www.btzsport.com/",
     tags: ["GraphQL", "Next.js", "React", "Shopify"],
-  },
-  {
-    id: "el-viejo-buzon",
-    title: "El Viejo Buzón",
-    // TODO: add a photo at public/el-viejo-buzon.webp and set image to "/el-viejo-buzon.webp".
-    image: null,
-    description:
-      "Landing page for El Viejo Buzón, a historic bar in Caballito, Buenos Aires. Next.js, with a fast first screen and a structure ready for search and AI answers (GEO/AEO).",
-    href: null,
-    tags: ["Next.js", "UX/UI"],
   },
   {
     id: "closet-dinamico",
