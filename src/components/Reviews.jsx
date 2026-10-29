@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { reviews } from "@/data/reviews";
 
 function formatReviewDate(isoDate) {
@@ -8,67 +11,124 @@ function formatReviewDate(isoDate) {
   }).format(new Date(`${isoDate}T12:00:00`));
 }
 
-function ReviewChat({ review }) {
-  return (
-    <article className="review-card review-card--chat">
-      <header className="review-card__header">
-        <span className="review-avatar" aria-hidden="true">
-          {review.author.slice(0, 1)}
-        </span>
-        <div>
-          <h3 className="review-card__author">{review.author}</h3>
-          <p className="review-card__meta">
-            {review.source} · {formatReviewDate(review.date)}
-          </p>
-        </div>
-      </header>
-      <div className="review-bubbles">
-        {review.messages.map((message) => (
-          <p key={message} className="review-bubble">
-            {message}
-          </p>
-        ))}
-      </div>
-    </article>
-  );
-}
-
-function ReviewQuote({ review }) {
-  return (
-    <article className="review-card">
-      <blockquote className="review-quote">
-        <p>{review.messages[0]}</p>
-      </blockquote>
-      <footer className="review-card__footer">
-        <span className="review-avatar review-avatar--small" aria-hidden="true">
-          {review.author.slice(0, 1)}
-        </span>
-        <div>
-          <p className="review-card__author">{review.author}</p>
-          <p className="review-card__meta">
-            {[review.role, review.source, formatReviewDate(review.date)].filter(Boolean).join(" · ")}
-          </p>
-        </div>
-      </footer>
-    </article>
-  );
+function creditFor(review) {
+  return [review.role, review.source, formatReviewDate(review.date)].filter(Boolean).join(" · ");
 }
 
 export function Reviews() {
+  const [index, setIndex] = useState(0);
+  const count = reviews.length;
+  const current = reviews[index];
+
+  function go(step) {
+    setIndex((value) => (value + step + count) % count);
+  }
+
   return (
-    <section className="reviews" id="reviews" aria-labelledby="reviews-title">
-      <p className="section-kicker">Reviews</p>
-      <h2 id="reviews-title" className="section-title">
-        What it is like to ship something together
+    <section
+      className="reviews"
+      id="reviews"
+      aria-labelledby="reviews-title"
+      aria-roledescription="carousel"
+      onKeyDown={(event) => {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          go(-1);
+        }
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          go(1);
+        }
+      }}
+    >
+      <h2 id="reviews-title" className="reviews__title">
+        Nice things <span className="highlight">people</span> say
+        <br />
+        about my work
       </h2>
-      <div className="reviews__grid">
-        {reviews.map((review) =>
-          review.messages.length > 1 ? (
-            <ReviewChat key={review.id} review={review} />
-          ) : (
-            <ReviewQuote key={review.id} review={review} />
-          ),
-        )}
+
+      <p className="sr-only" aria-live="polite">
+        {current.author}, {index + 1} of {count}
+      </p>
+
+      <div className="review-viewport">
+        <div
+          className="review-track"
+          style={{
+            transform: `translateX(calc((100% - var(--slide)) / 2 - ${index} * var(--slide)))`,
+          }}
+        >
+          {reviews.map((review, slideIndex) => {
+            const active = slideIndex === index;
+            return (
+              <div
+                key={review.id}
+                className={active ? "review-slide is-active" : "review-slide"}
+                role="group"
+                aria-roledescription="slide"
+                aria-label={`${slideIndex + 1} of ${count}`}
+                aria-hidden={!active}
+              >
+                <article
+                  className="testimonial"
+                  onClick={() => {
+                    if (!active) setIndex(slideIndex);
+                  }}
+                >
+                  <header className="testimonial__bar">
+                    <span>testimonial</span>
+                    <span className="testimonial__win" aria-hidden="true">
+                      <svg viewBox="0 0 12 12">
+                        <path d="M2 6h8" />
+                      </svg>
+                      <svg viewBox="0 0 12 12">
+                        <rect x="2.5" y="2.5" width="7" height="7" />
+                      </svg>
+                      <svg viewBox="0 0 12 12">
+                        <path d="M3 3l6 6M9 3L3 9" />
+                      </svg>
+                    </span>
+                  </header>
+                  <div className="testimonial__body">
+                    <div className="testimonial__copy">
+                      <span className="review-avatar" aria-hidden="true">
+                        {review.author.slice(0, 1)}
+                      </span>
+                      <div>
+                        {review.messages.map((message) => (
+                          <p key={message}>{message}</p>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="testimonial__by">
+                      <span className="highlight">{review.author}</span>
+                      <span> // {creditFor(review)}</span>
+                    </p>
+                  </div>
+                </article>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="review-nav">
+        <button type="button" aria-label="Previous review" onClick={() => go(-1)}>
+          <span aria-hidden="true">‹</span>
+        </button>
+        <div
+          className="review-nav__meter"
+          role="progressbar"
+          aria-valuemin={1}
+          aria-valuemax={count}
+          aria-valuenow={index + 1}
+          aria-label="Review position"
+        >
+          <span style={{ width: `${((index + 1) / count) * 100}%` }} />
+        </div>
+        <button type="button" aria-label="Next review" onClick={() => go(1)}>
+          <span aria-hidden="true">›</span>
+        </button>
       </div>
     </section>
   );
