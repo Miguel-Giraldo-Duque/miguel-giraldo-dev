@@ -42,7 +42,7 @@
   --spacing-md: 1rem;
 }
 * {
-  font-family: "Raleway", sans-serif;
+  font-family: inherit;
   font-optical-sizing: auto;
   font-style: normal;
   margin: 0;
@@ -110,6 +110,14 @@ body {
   background-color: var(--b-g);
   color: var(--texto-color);
   min-height: 100vh;
+  font-family: var(--font-raleway), "Raleway", sans-serif;
+}
+
+#root {
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 .container {
