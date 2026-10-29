@@ -212,7 +212,7 @@ p {
 .work-row__title {
   margin-top: 6px;
   color: var(--texto-color);
-  font-size: clamp(1.35rem, 2.4vw, 2.5rem);
+  font-size: var(--titulo-desktop);
   font-weight: 650;
   letter-spacing: -0.03em;
   line-height: 1.12;
@@ -243,7 +243,7 @@ p {
   place-items: center;
   border: 1px dashed rgba(255, 226, 0, 0.55);
   color: var(--color-primario);
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: var(--titulo-desktop);
   font-weight: 700;
   letter-spacing: 0.14em;
 }
@@ -469,10 +469,10 @@ a.work-row:focus-visible {
 
 .reviews__title {
   margin: 0 auto 1.75rem;
-  font-size: clamp(1.9rem, 4.8vw, 4.15rem);
+  font-size: var(--titulo-desktop);
   font-weight: 700;
-  letter-spacing: -0.045em;
-  line-height: 0.95;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
 }
 
 .review-viewport {
@@ -494,6 +494,10 @@ a.work-row:focus-visible {
   transition: opacity 0.45s ease;
 }
 
+.review-slide:not(.is-active) {
+  cursor: pointer;
+}
+
 .review-slide.is-active {
   opacity: 1;
 }
@@ -510,8 +514,9 @@ a.work-row:focus-visible {
   box-shadow: var(--drop-shadow-imagen);
 }
 
-.review-slide:not(.is-active) .testimonial {
-  cursor: pointer;
+.review-slide:not(.is-active):focus-visible {
+  outline: 2px solid var(--color-primario);
+  outline-offset: 4px;
 }
 
 .testimonial__bar {
@@ -550,7 +555,7 @@ a.work-row:focus-visible {
   align-items: flex-start;
   gap: 14px;
   color: var(--texto-color);
-  font-size: 16px;
+  font-size: var(--texto-mobile);
   line-height: 1.55;
 }
 
@@ -651,7 +656,7 @@ a.work-row:focus-visible {
   }
 
   .testimonial__copy {
-    font-size: 17px;
+    font-size: var(--texto-desktop);
   }
 }
 
@@ -733,7 +738,7 @@ a.work-row:focus-visible {
   border-radius: var(--border-radius);
   background: transparent;
   color: var(--texto-color);
-  font-size: 18px;
+  font-size: var(--texto-mobile);
 }
 
 .field textarea {
@@ -779,7 +784,7 @@ a.work-row:focus-visible {
 }
 
 .form-status h3 {
-  font-size: var(--subtitulo-xl-desktop);
+  font-size: var(--subtitulo-desktop);
   margin-bottom: 8px;
 }
 
@@ -903,13 +908,23 @@ a.work-row:focus-visible {
 
   .field input,
   .field textarea {
-    padding: 20px 22px;
-    font-size: 22px;
+    padding: 18px 20px;
+    font-size: var(--texto-desktop);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .contact__submit {
     transition: none;
+  }
+}
+
+@media (width <= 740px) {
+  .portfolio__header h1,
+  .section-title,
+  .reviews__title,
+  .work-row__title,
+  .legal h1 {
+    font-size: var(--titulo-mobile);
   }
 }

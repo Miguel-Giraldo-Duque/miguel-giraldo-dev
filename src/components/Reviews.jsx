@@ -67,17 +67,20 @@ export function Reviews({ dict, locale }) {
               <div
                 key={review.id}
                 className={active ? "review-slide is-active" : "review-slide"}
-                role="group"
+                role={active ? "group" : "button"}
+                tabIndex={active ? undefined : 0}
                 aria-roledescription="slide"
-                aria-label={`${slideIndex + 1} of ${count}`}
-                aria-hidden={!active}
+                aria-label={`${review.author}, ${slideIndex + 1} ${dict.of} ${count}`}
+                onClick={() => {
+                  if (!active) setIndex(slideIndex);
+                }}
+                onKeyDown={(event) => {
+                  if (active || (event.key !== "Enter" && event.key !== " ")) return;
+                  event.preventDefault();
+                  setIndex(slideIndex);
+                }}
               >
-                <article
-                  className="testimonial"
-                  onClick={() => {
-                    if (!active) setIndex(slideIndex);
-                  }}
-                >
+                <article className="testimonial">
                   <header className="testimonial__bar">
                     <span>{dict.window}</span>
                     <span className="testimonial__win" aria-hidden="true">
