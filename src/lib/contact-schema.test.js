@@ -18,11 +18,19 @@ test("accepts a complete message", () => {
 test("requires the privacy checkbox", () => {
   const result = contactSchema.safeParse({ ...valid, privacyAccepted: false });
   assert.equal(result.success, false);
+  if (!result.success) {
+    assert.equal(result.error.flatten().fieldErrors.privacyAccepted[0], "privacy_required");
+  }
 });
 
 test("rejects a short message and a bad email", () => {
   const result = contactSchema.safeParse({ ...valid, email: "nope", message: "hola" });
   assert.equal(result.success, false);
+  if (!result.success) {
+    const errors = result.error.flatten().fieldErrors;
+    assert.equal(errors.email[0], "email_invalid");
+    assert.equal(errors.message[0], "message_short");
+  }
 });
 
 test("allows an empty company and still parses a filled honeypot", () => {

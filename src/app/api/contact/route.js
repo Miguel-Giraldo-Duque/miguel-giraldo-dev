@@ -7,7 +7,7 @@ export async function POST(request) {
   try {
     body = await request.json();
   } catch {
-    return Response.json({ ok: false, message: "No pude leer el mensaje." }, { status: 400 });
+    return Response.json({ ok: false, message: "unreadable" }, { status: 400 });
   }
 
   const parsed = contactSchema.safeParse(body);
@@ -33,7 +33,7 @@ export async function POST(request) {
     return Response.json(
       {
         ok: false,
-        message: "No pude enviar el mensaje. Intentá de nuevo en unos minutos.",
+        message: "send_failed",
       },
       { status: 500 },
     );

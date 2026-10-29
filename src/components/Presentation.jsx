@@ -14,7 +14,7 @@ const itemVariants = {
   },
 };
 
-export function Presentation() {
+export function Presentation({ dict }) {
   return (
     <motion.section
       className="presentation"
@@ -36,17 +36,11 @@ export function Presentation() {
       <div className="presentation__info">
         <motion.h2 variants={itemVariants}>Miguel Angel Giraldo Duque</motion.h2>
         <motion.p variants={itemVariants}>
-          {" "}
-          Born in Colombia and based in Buenos Aires, Argentina, I’m a
+          {dict.before}{" "}
           <span className="highlight">
-            <strong>
-              {" "}
-              Full Stack Developer with +4 years of experience and +2 years as a UX/UI designer
-            </strong>
+            <strong>{dict.highlight}</strong>
           </span>
-          . I combine engineering and design to build end-to-end products—from interface and
-          business logic to integration and deployment—across sustainable fashion e-commerce as
-          well as quantum computing and knowledge mining at{" "}
+          {dict.after}{" "}
           <a
             href="https://www.linkedin.com/company/qnow-tech/posts/?feedView=all"
             target="_blank"

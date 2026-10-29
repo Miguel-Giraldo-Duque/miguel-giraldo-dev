@@ -21,7 +21,7 @@ function focusFirst(errors) {
   document.getElementById(key)?.focus();
 }
 
-export function Contact() {
+export function Contact({ dict, lang }) {
   const [values, setValues] = useState(EMPTY);
   const [errors, setErrors] = useState({});
   const [formError, setFormError] = useState("");
@@ -30,6 +30,11 @@ export function Contact() {
   function update(field, value) {
     setValues((current) => ({ ...current, [field]: value }));
     setErrors((current) => ({ ...current, [field]: undefined }));
+  }
+
+  function text(code) {
+    if (!code) return "";
+    return dict.errors[code] || dict.errors.send_failed;
   }
 
   async function handleSubmit(event) {
@@ -60,9 +65,7 @@ export function Contact() {
           setErrors(payload.errors);
           focusFirst(payload.errors);
         } else {
-          setFormError(
-            payload.message || "No pude enviar el mensaje. Intentá de nuevo en unos minutos.",
-          );
+          setFormError(payload.message || "send_failed");
         }
         setStatus("idle");
         return;
@@ -70,7 +73,7 @@ export function Contact() {
 
       setStatus("success");
     } catch {
-      setFormError("No pude enviar el mensaje. Revisá tu conexión e intentá de nuevo.");
+      setFormError("network");
       setStatus("idle");
     }
   }
@@ -79,20 +82,17 @@ export function Contact() {
     <section className="contact" id="contact" aria-labelledby="contact-title">
       <div className="contact__layout">
         <div className="contact__intro">
-          <p className="section-kicker">Contacto</p>
+          <p className="section-kicker">{dict.kicker}</p>
           <h2 id="contact-title" className="section-title">
-            ¿Querés hablar de un proyecto?
+            {dict.title}
           </h2>
-          <p className="contact__lead">
-            Armo landing pages para negocios locales: rápidas, con un precio claro, y listas para
-            que te encuentren las personas y los buscadores con IA (GEO/AEO).
-          </p>
+          <p className="contact__lead">{dict.lead}</p>
         </div>
 
         {status === "success" ? (
           <div className="form-status" role="status">
-            <h3>Listo.</h3>
-            <p>Recibí tu mensaje y te respondo a la brevedad.</p>
+            <h3>{dict.successTitle}</h3>
+            <p>{dict.successBody}</p>
             <button
               type="button"
               className="contact__submit"
@@ -103,13 +103,13 @@ export function Contact() {
                 setStatus("idle");
               }}
             >
-              Enviar otro mensaje
+              {dict.another}
             </button>
           </div>
         ) : (
           <form className="contact__form" noValidate onSubmit={handleSubmit} aria-busy={status === "submitting"}>
             <div className="hp" aria-hidden="true">
-              <label htmlFor="hp">Company website</label>
+              <label htmlFor="hp">{dict.honeypot}</label>
               <input
                 id="hp"
                 name="hp"
@@ -124,9 +124,9 @@ export function Contact() {
             <Field
               id="fullName"
               index="01"
-              label="Nombre completo"
+              label={dict.fullName}
               required
-              error={errors.fullName}
+              error={text(errors.fullName)}
             >
               <input
                 id="fullName"
@@ -142,7 +142,7 @@ export function Contact() {
               />
             </Field>
 
-            <Field id="company" index="02" label="Compañía" error={errors.company}>
+            <Field id="company" index="02" label={dict.company} error={text(errors.company)}>
               <input
                 id="company"
                 name="company"
@@ -155,7 +155,7 @@ export function Contact() {
               />
             </Field>
 
-            <Field id="email" index="03" label="Email" required error={errors.email}>
+            <Field id="email" index="03" label={dict.email} required error={text(errors.email)}>
               <input
                 id="email"
                 name="email"
@@ -171,7 +171,7 @@ export function Contact() {
               />
             </Field>
 
-            <Field id="message" index="04" label="Mensaje" required error={errors.message}>
+            <Field id="message" index="04" label={dict.message} required error={text(errors.message)}>
               <textarea
                 id="message"
                 name="message"
@@ -197,25 +197,25 @@ export function Contact() {
                 onChange={(event) => update("privacyAccepted", event.target.checked)}
               />
               <label htmlFor="privacyAccepted">
-                Acepto la <Link href="/privacidad">política de privacidad</Link> y el uso de estos
-                datos para responder mi consulta.
+                {dict.consentBefore} <Link href={`/${lang}/privacidad`}>{dict.consentLink}</Link>{" "}
+                {dict.consentAfter}
                 <span aria-hidden="true"> *</span>
               </label>
             </div>
             {errors.privacyAccepted ? (
               <p id="privacyAccepted-error" className="form-error">
-                {errors.privacyAccepted}
+                {text(errors.privacyAccepted)}
               </p>
             ) : null}
 
             {formError ? (
               <p className="form-error" role="alert">
-                {formError}
+                {text(formError)}
               </p>
             ) : null}
 
             <button className="contact__submit" type="submit" disabled={status === "submitting"}>
-              {status === "submitting" ? "Enviando…" : "Enviar mensaje"}
+              {status === "submitting" ? dict.sending : dict.submit}
             </button>
           </form>
         )}

@@ -71,13 +71,13 @@ function ProjectMedia({ project }) {
   );
 }
 
-function WorkRow({ project, index }) {
+function WorkRow({ project, index, locale, labels }) {
   const copy = (
     <>
       <div className="work-row__copy">
         <p className="work-row__index">
           <span>{String(index + 1).padStart(2, "0")}</span>
-          {project.private ? <span className="work-row__private">Private</span> : null}
+          {project.private ? <span className="work-row__private">{labels.private}</span> : null}
           {project.href ? (
             <span className="work-row__arrow" aria-hidden="true">
               →
@@ -86,7 +86,7 @@ function WorkRow({ project, index }) {
         </p>
         <h2 className="work-row__title">{project.title}</h2>
         <Tags names={project.tags} />
-        <p className="work-row__description">{project.description}</p>
+        <p className="work-row__description">{project.description[locale] ?? project.description.es}</p>
       </div>
       <ProjectMedia project={project} />
     </>
@@ -104,21 +104,21 @@ function WorkRow({ project, index }) {
     <li>
       <a className="work-row" href={project.href} target="_blank" rel="noopener noreferrer">
         {copy}
-        <span className="sr-only"> (opens in a new tab)</span>
+        <span className="sr-only">{labels.newTab}</span>
       </a>
     </li>
   );
 }
 
-export function Projects() {
+export function Projects({ dict, locale }) {
   return (
     <section className="work" id="work" aria-labelledby="work-title">
       <header className="portfolio__header">
-        <h3 className="portfolio__header__subtitle">Projects</h3>
+        <h3 className="portfolio__header__subtitle">{dict.kicker}</h3>
         <h1 id="work-title">
-          What I Learn and
+          {dict.titleLine1}
           <br />
-          Apply to the <span className="highlight">World</span>
+          {dict.titleLine2Before} <span className="highlight">{dict.titleHighlight}</span>
         </h1>
         <div className="portfolio__header__tags">
           <Tags names={skills} />
@@ -126,7 +126,7 @@ export function Projects() {
       </header>
       <ol className="work-list">
         {projects.map((project, index) => (
-          <WorkRow key={project.id} project={project} index={index} />
+          <WorkRow key={project.id} project={project} index={index} locale={locale} labels={dict} />
         ))}
       </ol>
     </section>

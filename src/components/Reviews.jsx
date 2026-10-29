@@ -3,19 +3,19 @@
 import { useState } from "react";
 import { reviews } from "@/data/reviews";
 
-function formatReviewDate(isoDate) {
-  return new Intl.DateTimeFormat("en-GB", {
+function formatReviewDate(isoDate, locale) {
+  return new Intl.DateTimeFormat(locale === "en" ? "en-GB" : "es-AR", {
     day: "numeric",
     month: "short",
     year: "numeric",
   }).format(new Date(`${isoDate}T12:00:00`));
 }
 
-function creditFor(review) {
-  return [review.role, review.source, formatReviewDate(review.date)].filter(Boolean).join(" · ");
+function creditFor(review, locale) {
+  return [review.role, review.source, formatReviewDate(review.date, locale)].filter(Boolean).join(" · ");
 }
 
-export function Reviews() {
+export function Reviews({ dict, locale }) {
   const [index, setIndex] = useState(0);
   const count = reviews.length;
   const current = reviews[index];
@@ -42,13 +42,16 @@ export function Reviews() {
       }}
     >
       <h2 id="reviews-title" className="reviews__title">
-        Nice things <span className="highlight">people</span> say
+        {dict.titleLead} <span className="highlight">{dict.titleHighlight}</span> {dict.titleTail}
         <br />
-        about my work
+        {dict.titleSecond}
       </h2>
 
       <p className="sr-only" aria-live="polite">
-        {current.author}, {index + 1} of {count}
+        {dict.live
+          .replace("{author}", current.author)
+          .replace("{current}", String(index + 1))
+          .replace("{count}", String(count))}
       </p>
 
       <div className="review-viewport">
@@ -76,7 +79,7 @@ export function Reviews() {
                   }}
                 >
                   <header className="testimonial__bar">
-                    <span>testimonial</span>
+                    <span>{dict.window}</span>
                     <span className="testimonial__win" aria-hidden="true">
                       <svg viewBox="0 0 12 12">
                         <path d="M2 6h8" />
@@ -102,7 +105,7 @@ export function Reviews() {
                     </div>
                     <p className="testimonial__by">
                       <span className="highlight">{review.author}</span>
-                      <span> // {creditFor(review)}</span>
+                      <span> // {creditFor(review, locale)}</span>
                     </p>
                   </div>
                 </article>
@@ -113,7 +116,7 @@ export function Reviews() {
       </div>
 
       <div className="review-nav">
-        <button type="button" aria-label="Previous review" onClick={() => go(-1)}>
+        <button type="button" aria-label={dict.previous} onClick={() => go(-1)}>
           <span aria-hidden="true">‹</span>
         </button>
         <div
@@ -122,11 +125,11 @@ export function Reviews() {
           aria-valuemin={1}
           aria-valuemax={count}
           aria-valuenow={index + 1}
-          aria-label="Review position"
+          aria-label={dict.position}
         >
           <span style={{ width: `${((index + 1) / count) * 100}%` }} />
         </div>
-        <button type="button" aria-label="Next review" onClick={() => go(1)}>
+        <button type="button" aria-label={dict.next} onClick={() => go(1)}>
           <span aria-hidden="true">›</span>
         </button>
       </div>

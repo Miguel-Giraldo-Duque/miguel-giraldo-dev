@@ -1,25 +1,12 @@
 import { z } from "zod";
 
 export const contactSchema = z.object({
-  fullName: z
-    .string()
-    .trim()
-    .min(2, "Ingresá tu nombre completo.")
-    .max(120, "El nombre es demasiado largo."),
-  company: z.string().trim().max(120, "La compañía no puede superar los 120 caracteres."),
-  email: z
-    .string()
-    .trim()
-    .min(1, "Ingresá un email.")
-    .email("Ingresá un email válido.")
-    .max(200, "El email es demasiado largo."),
-  message: z
-    .string()
-    .trim()
-    .min(10, "Contame un poco más, al menos 10 caracteres.")
-    .max(4000, "El mensaje es demasiado largo."),
+  fullName: z.string().trim().min(2, "name_short").max(120, "name_long"),
+  company: z.string().trim().max(120, "company_long"),
+  email: z.string().trim().min(1, "email_required").email("email_invalid").max(200, "email_long"),
+  message: z.string().trim().min(10, "message_short").max(4000, "message_long"),
   privacyAccepted: z.boolean().refine((value) => value === true, {
-    message: "Tenés que aceptar la política de privacidad.",
+    message: "privacy_required",
   }),
   hp: z.string().max(200).optional().default(""),
 });

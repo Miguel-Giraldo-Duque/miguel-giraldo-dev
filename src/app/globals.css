@@ -116,7 +116,7 @@ body {
 #root {
   overflow-x: hidden;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 2rem 5.5rem;
   text-align: center;
 }
 
@@ -441,7 +441,7 @@ a.work-row:focus-visible {
   }
 
   #root {
-    padding: 0.75rem 0 2rem;
+    padding: 0.75rem 0 5.5rem;
   }
 
   .container {
@@ -848,6 +848,44 @@ a.work-row:focus-visible {
 
 .legal ul {
   padding-left: 1.2rem;
+}
+
+.locale-switch {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid rgba(216, 214, 228, 0.35);
+  border-radius: var(--border-radius);
+  background: var(--b-g);
+  box-shadow: var(--drop-shadow-imagen);
+}
+
+.locale-switch a {
+  min-width: 40px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--texto-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.locale-switch a[aria-current="true"],
+.locale-switch a:hover,
+.locale-switch a:focus-visible {
+  background: var(--color-primario);
+  color: var(--b-g);
+}
+
+.locale-switch a:focus-visible {
+  outline: 2px solid var(--color-primario);
+  outline-offset: 2px;
 }
 
 @media (width >= 900px) {

@@ -1,9 +1,9 @@
-export function SiteNav() {
+export function SiteNav({ dict }) {
   return (
-    <nav className="site-nav" aria-label="Sections">
-      <a href="#work">Projects</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
+    <nav className="site-nav" aria-label={dict.label}>
+      <a href="#work">{dict.work}</a>
+      <a href="#reviews">{dict.reviews}</a>
+      <a href="#contact">{dict.contact}</a>
     </nav>
   );
 }
