@@ -70,3 +70,7 @@ CONTACT_TO_EMAIL=you@gmail.com
 Port `465` turns on implicit TLS (`secure: true`). Any other port, including `587`, uses STARTTLS via Nodemailer's defaults.
 
 The Nodemailer sender sends the HTML rendered from the same React Email component plus the plain-text version. It does not call Resend.
+
+## Notes
+
+A separate note on using ConvertFlow for a first popup or quiz is in [docs/funnel-evaluation.md](docs/funnel-evaluation.md). It is research only. The script is not installed.
