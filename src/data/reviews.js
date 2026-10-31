@@ -1,52 +1,48 @@
 /**
  * Slides for the reviews carousel.
- * Add an object to grow the list. `messages` are the paragraphs inside one window.
+ * `messages` are the paragraphs inside one window.
+ * `profileUrl` makes the author tag open their profile.
+ * `image` is a file in /public.
  */
 export const reviews = [
   {
-    id: "zora-whatsapp",
-    author: "Zora",
+    id: "juan-david-verano",
+    author: "Juan David Verano",
+    role: "Qnow",
+    profileUrl: "https://www.linkedin.com/in/juandavidverano/",
+    image: "/reviews/juandavid-verano.png",
+    messages: [
+      "Como diseñador UX tuve una gran experiencia de trabajo con Migue, no sólo por su conocimiento técnico y capacidad para plasmar en código las ideas, sino por su buena disposición de trabajo en equipo, al escuchar y proponer soluciones para sacar adelante cada proyecto.",
+    ],
+  },
+  {
+    id: "luis-daniel-ruiz",
+    author: "Luis Daniel Ruiz",
+    role: "Qnow",
+    profileUrl: "https://www.linkedin.com/in/luisdanielruiz-in/",
+    image: "/reviews/luisdaniel-ruiz.png",
+    messages: [
+      "Trabajar con Migue ha sido una experiencia muy positiva. Es responsable, comprometido y tiene una gran capacidad para afrontar desafíos. Se destaca por combinar un sólido perfil técnico con una mirada creativa que aporta valor y nuevas perspectivas a cada proyecto.",
+    ],
+  },
+  {
+    id: "mariano-caruso",
+    author: "Mariano Caruso",
     role: "",
-    source: "WhatsApp",
-    // 3/6/2026, read as 3 June 2026 (day/month/year).
-    date: "2026-06-03",
+    profileUrl: "https://www.linkedin.com/in/marianocaruso/",
+    image: "/reviews/mariano-caruso.jpg",
     messages: [
-      "Migueeee, eres el mejor",
-      "Woow que nota!!! Me encanta",
-      "Esto es como ver la luz al final del túnel",
+      "Trabajar con Miguel es sinónimo de versatilidad y visión de producto de punta a punta. Su capacidad única para fusionar el desarrollo Full Stack, el diseño UX y la programación de agentes inteligentes permite transformar conceptos tecnológicos complejos en experiencias digitales intuitivas, atractivas y de alto impacto.",
     ],
   },
-  // TODO: replace this placeholder with a real client review.
   {
-    id: "placeholder-local-01",
-    author: "Lorem Ipsum",
-    role: "Dolor Sit, Amet Studio",
-    source: "",
-    date: "2026-03-12",
+    id: "zora-btz",
+    author: "Zora",
+    role: "BTZ",
+    profileUrl: "https://www.instagram.com/triestinazora/",
+    image: "/reviews/zora-triestina.png",
     messages: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
-    ],
-  },
-  // TODO: replace this placeholder with a real client review.
-  {
-    id: "placeholder-local-02",
-    author: "Consectetur Adipiscing",
-    role: "Elit Local",
-    source: "",
-    date: "2026-02-02",
-    messages: [
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    ],
-  },
-  // TODO: replace this placeholder with a real client review.
-  {
-    id: "placeholder-local-03",
-    author: "Tempor Incididunt",
-    role: "Ut Labore",
-    source: "",
-    date: "2026-01-18",
-    messages: [
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Miguel es una persona proactiva, que hace propuestas coherentes e investiga para buscar apoyarse para tener fundamentos del desarrollo de los proyectos.",
     ],
   },
 ];

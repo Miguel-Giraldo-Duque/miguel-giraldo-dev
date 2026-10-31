@@ -568,6 +568,12 @@ a.work-row:focus-visible {
   margin-top: 0;
 }
 
+.review-avatar-link {
+  flex-shrink: 0;
+  line-height: 0;
+  border-radius: 50%;
+}
+
 .review-avatar {
   display: grid;
   place-items: center;
@@ -575,9 +581,30 @@ a.work-row:focus-visible {
   width: 46px;
   height: 46px;
   border-radius: 50%;
+  object-fit: cover;
   background: var(--color-primario);
   color: var(--b-g);
   font-weight: 700;
+}
+
+.review-profile {
+  color: var(--color-primario);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.review-profile:hover,
+.review-profile:focus-visible,
+.review-avatar-link:hover,
+.review-avatar-link:focus-visible {
+  color: white;
+  outline: none;
+}
+
+.review-avatar-link:focus-visible,
+.review-profile:focus-visible {
+  outline: 2px solid var(--color-primario);
+  outline-offset: 3px;
 }
 
 .testimonial__by {
@@ -587,7 +614,8 @@ a.work-row:focus-visible {
   line-height: 1.4;
 }
 
-.testimonial__by .highlight {
+.testimonial__by .highlight,
+.testimonial__by .review-profile {
   font-weight: 700;
 }
 
