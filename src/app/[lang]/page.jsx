@@ -18,7 +18,7 @@ export default async function Page() {
         <div className="color__1" aria-hidden="true" />
         <div className="color__2" aria-hidden="true" />
         <Projects dict={dict.projects} locale={locale} />
-        <Reviews dict={dict.reviews} locale={locale} />
+        <Reviews dict={dict.reviews} />
         <Contact dict={dict.contact} lang={locale} />
       </div>
     </div>

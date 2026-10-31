@@ -3,19 +3,57 @@
 import { useState } from "react";
 import { reviews } from "@/data/reviews";
 
-function formatReviewDate(isoDate, locale) {
-  return new Intl.DateTimeFormat(locale === "en" ? "en-GB" : "es-AR", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  }).format(new Date(`${isoDate}T12:00:00`));
+function creditFor(review) {
+  return [review.role, review.source].filter(Boolean).join(" · ");
 }
 
-function creditFor(review, locale) {
-  return [review.role, review.source, formatReviewDate(review.date, locale)].filter(Boolean).join(" · ");
+function ProfileTag({ review, children }) {
+  if (!review.profileUrl) {
+    return <span className="highlight">{children}</span>;
+  }
+
+  return (
+    <a
+      className="review-profile"
+      href={review.profileUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={(event) => event.stopPropagation()}
+      onKeyDown={(event) => event.stopPropagation()}
+    >
+      {children}
+    </a>
+  );
 }
 
-export function Reviews({ dict, locale }) {
+function Avatar({ review }) {
+  const initial = review.author.slice(0, 1);
+  const photo = review.image ? (
+    <img className="review-avatar" src={review.image} alt="" width={46} height={46} />
+  ) : (
+    <span className="review-avatar" aria-hidden="true">
+      {initial}
+    </span>
+  );
+
+  if (!review.profileUrl) return photo;
+
+  return (
+    <a
+      className="review-avatar-link"
+      href={review.profileUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={review.author}
+      onClick={(event) => event.stopPropagation()}
+      onKeyDown={(event) => event.stopPropagation()}
+    >
+      {photo}
+    </a>
+  );
+}
+
+export function Reviews({ dict }) {
   const [index, setIndex] = useState(0);
   const count = reviews.length;
   const current = reviews[index];
@@ -63,6 +101,7 @@ export function Reviews({ dict, locale }) {
         >
           {reviews.map((review, slideIndex) => {
             const active = slideIndex === index;
+            const credit = creditFor(review);
             return (
               <div
                 key={review.id}
@@ -97,9 +136,7 @@ export function Reviews({ dict, locale }) {
                   </header>
                   <div className="testimonial__body">
                     <div className="testimonial__copy">
-                      <span className="review-avatar" aria-hidden="true">
-                        {review.author.slice(0, 1)}
-                      </span>
+                      <Avatar review={review} />
                       <div>
                         {review.messages.map((message) => (
                           <p key={message}>{message}</p>
@@ -107,8 +144,13 @@ export function Reviews({ dict, locale }) {
                       </div>
                     </div>
                     <p className="testimonial__by">
-                      <span className="highlight">{review.author}</span>
-                      <span> // {creditFor(review, locale)}</span>
+                      <ProfileTag review={review}>{review.author}</ProfileTag>
+                      {credit ? (
+                        <>
+                          <span> // </span>
+                          <ProfileTag review={review}>{credit}</ProfileTag>
+                        </>
+                      ) : null}
                     </p>
                   </div>
                 </article>
