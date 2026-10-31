@@ -28,7 +28,7 @@ export const reviews = [
   {
     id: "mariano-caruso",
     author: "Mariano Caruso",
-    role: "Qnow",
+    role: "",
     profileUrl: "https://www.linkedin.com/in/marianocaruso/",
     image: "/reviews/mariano-caruso.jpg",
     messages: [
