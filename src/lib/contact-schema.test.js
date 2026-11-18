@@ -6,7 +6,7 @@ const valid = {
   fullName: "Ana Pérez",
   company: "Estudio Norte",
   email: "ana@example.com",
-  message: "Quiero una landing para el bar.",
+  message: "We are hiring a Forward Deployed Engineer — can we talk?",
   privacyAccepted: true,
   hp: "",
 };

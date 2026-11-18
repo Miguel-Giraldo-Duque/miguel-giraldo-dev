@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { SAME_AS } from "@/lib/site";
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -14,6 +16,8 @@ const itemVariants = {
   },
 };
 
+const [linkedinUrl, githubUrl] = SAME_AS;
+
 export function Presentation({ dict }) {
   return (
     <motion.section
@@ -25,16 +29,17 @@ export function Presentation({ dict }) {
         visible: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } },
       }}
     >
-      <img
+      <Image
+        className="presentation__photo"
         src="/FotoPerfil2.webp"
-        alt="Miguel Angel Giraldo"
-        loading="eager"
-        fetchPriority="high"
-        width="220"
-        height="212"
+        alt="Miguel Angel Giraldo Duque"
+        width={220}
+        height={220}
+        priority
+        sizes="(max-width: 740px) 160px, 220px"
       />
       <div className="presentation__info">
-        <motion.h2 variants={itemVariants}>Miguel Angel Giraldo Duque</motion.h2>
+        <motion.h1 variants={itemVariants}>Miguel Angel Giraldo Duque</motion.h1>
         <motion.p variants={itemVariants}>
           {dict.before}{" "}
           <span className="highlight">
@@ -52,19 +57,11 @@ export function Presentation({ dict }) {
         </motion.p>
 
         <div className="presentation__info__social">
-          <a
-            href="https://www.linkedin.com/in/miguel-giraldo-duke-5a680b299/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/linkedin.svg" alt="LinkedIn" />
+          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+            <img src="/linkedin.svg" alt="LinkedIn" width={25} height={25} />
           </a>
-          <a
-            href="https://github.com/Miguel-Giraldo-Duque"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/github.svg" alt="GitHub" />
+          <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+            <img src="/github.svg" alt="GitHub" width={25} height={25} />
           </a>
         </div>
       </div>
