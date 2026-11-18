@@ -29,7 +29,17 @@ const TAG_ICONS = {
   Shopify: SiShopify,
 };
 
-const skills = ["React", "TypeScript", "Next.js", "Node.js", "UX/UI", "Cypress", "Vitest", "CSS"];
+const skills = [
+  "React",
+  "TypeScript",
+  "Next.js",
+  "Node.js",
+  "UX/UI",
+  "Cypress",
+  "Vitest",
+  "Knowledge graphs",
+  "Customer delivery",
+];
 
 function initials(title) {
   return title
@@ -60,7 +70,17 @@ function Tags({ names }) {
 
 function ProjectMedia({ project }) {
   if (project.image) {
-    return <img className="work-row__media" src={project.image} alt="" />;
+    return (
+      <img
+        className="work-row__media"
+        src={project.image}
+        alt=""
+        width={320}
+        height={200}
+        loading="lazy"
+        decoding="async"
+      />
+    );
   }
 
   return (

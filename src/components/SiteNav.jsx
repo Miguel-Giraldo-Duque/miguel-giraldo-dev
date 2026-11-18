@@ -3,6 +3,7 @@ export function SiteNav({ dict }) {
     <nav className="site-nav" aria-label={dict.label}>
       <a href="#work">{dict.work}</a>
       <a href="#reviews">{dict.reviews}</a>
+      <a href="#faq">{dict.faq}</a>
       <a href="#contact">{dict.contact}</a>
     </nav>
   );

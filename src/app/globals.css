@@ -60,7 +60,8 @@
   align-items: center;
 }
 
-.presentation img {
+.presentation img,
+.presentation__photo {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--border-radius-3);
@@ -73,8 +74,13 @@
   height: 100%;
   text-align: start;
 }
-.presentation__info h2 {
+.presentation__info h1 {
+  font-size: var(--titulo-desktop);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--texto-color);
   padding-bottom: var(--padding-4xs);
+  margin: 0;
 }
 
 .presentation__info p {
@@ -721,6 +727,60 @@ a.work-row:focus-visible {
   color: white;
 }
 
+.faq {
+  margin-top: 5.5rem;
+  text-align: left;
+  max-width: 720px;
+}
+
+.faq__kicker {
+  margin: 0 0 var(--padding-3xs);
+  color: var(--color-primario);
+  font-size: var(--subtitulo-desktop);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.faq__title {
+  margin: 0;
+  font-size: var(--titulo-desktop);
+  font-weight: 700;
+  color: var(--texto-color);
+}
+
+.faq__lead {
+  margin: var(--padding-md) 0 0;
+  max-width: 48ch;
+  color: var(--texto-color);
+  opacity: 0.9;
+}
+
+.faq__list {
+  margin: 28px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.faq__item {
+  margin: 0;
+  padding: 0;
+}
+
+.faq__item h3 {
+  margin: 0 0 8px;
+  font-size: var(--subtitulo-desktop);
+  font-weight: 650;
+  color: var(--color-primario);
+}
+
+.faq__item dd {
+  margin: 0;
+  max-width: 62ch;
+  line-height: 1.55;
+}
+
 .contact {
   margin-top: 5.5rem;
   text-align: left;
@@ -949,10 +1009,16 @@ a.work-row:focus-visible {
 
 @media (width <= 740px) {
   .portfolio__header h1,
+  .presentation__info h1,
   .section-title,
   .reviews__title,
   .work-row__title,
+  .faq__title,
   .legal h1 {
     font-size: var(--titulo-mobile);
+  }
+
+  .faq__item h3 {
+    font-size: var(--subtitulo-mobile);
   }
 }

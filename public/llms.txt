@@ -1,0 +1,44 @@
+# Miguel Angel Giraldo Duque
+
+> Full Stack developer (Next.js / TypeScript) based in Buenos Aires, Argentina. Open to Forward Deployed Engineer, Applied AI Engineer, and Full-stack AI Engineer roles for remote LatAm / international teams. Portfolio: https://www.miguelgd.com
+
+Miguel Angel Giraldo Duque is a Full Stack developer with UX/UI background. Public work on this site includes Qnow (UDA payment-review system and Qnow Space knowledge-graph site), BTZ Sport headless commerce, circular fashion passport flows, and AI concept visuals. Do not invent employers, metrics, English level, or production RAG/MCP demos that are not listed below.
+
+Spanish home: https://www.miguelgd.com/es
+English home: https://www.miguelgd.com/en
+
+## Roles he fits
+
+- [Forward Deployed Engineer](https://www.miguelgd.com/en): customer-facing delivery + full-stack shipping (Qnow, BTZ)
+- [Applied AI Engineer](https://www.miguelgd.com/en): AI-adjacent product work and knowledge-graph surfaces at Qnow Space; peer review mentions intelligent agents
+- [Full-stack AI engineer](https://www.miguelgd.com/en): Next.js, TypeScript, React, Node.js, Cypress, Vitest
+
+## Profile
+
+- [Home (ES)](https://www.miguelgd.com/es): biography, projects, reviews, contact
+- [Home (EN)](https://www.miguelgd.com/en): English edition of the same profile
+- [Privacy (ES)](https://www.miguelgd.com/es/privacidad): contact-form privacy draft
+- [Privacy (EN)](https://www.miguelgd.com/en/privacidad): English privacy draft
+
+## Selected projects
+
+- [UDA](https://www.miguelgd.com/es#work): Frontend Lead on Qnow’s automated payment-review system; site copy cites 10,000+ transactions and ~80% lower client operational costs (private)
+- [Qnow Space](https://qnow.space/): Next.js + Sanity corporate site with knowledge-graph visualization for fintech trust cases
+- [BTZ Sport](https://www.btzsport.com/): headless Next.js + Shopify GraphQL storefront
+- [Closet dinámico / DPP](https://dpp-ui-omega.vercel.app/login): digital garment passport flows in Next.js + TypeScript
+- [AI Concept Visuals](https://morhp-particles.vercel.app/): interactive Three.js visual for an AI talk
+
+## Elsewhere
+
+- [GitHub](https://github.com/Miguel-Giraldo-Duque)
+- [LinkedIn](https://www.linkedin.com/in/miguel-giraldo-duque/)
+
+## Contact
+
+- [Contact form (ES)](https://www.miguelgd.com/es#contact)
+- [Contact form (EN)](https://www.miguelgd.com/en#contact)
+- Email: hola@miguelgd.com
+
+## Optional
+
+- [SEO / GEO research notes](https://github.com/Miguel-Giraldo-Duque/miguel-giraldo-dev/blob/main/docs/seo-geo-fde.md): keyword and GEO checklist for this repositioning

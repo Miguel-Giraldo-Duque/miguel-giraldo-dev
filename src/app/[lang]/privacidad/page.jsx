@@ -1,14 +1,28 @@
 import Link from "next/link";
 import { lang } from "next/root-params";
+import { absoluteUrl, localePrivacyPath, SITE_URL } from "@/lib/site";
+import { locales } from "@/lib/locale";
 import { getDictionary } from "../dictionaries";
 
 // TODO: have a lawyer review this draft before treating it as the published policy.
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }) {
+  const { lang: locale } = await params;
   const dict = await getDictionary();
+  const path = localePrivacyPath(locale);
+  const languages = Object.fromEntries(
+    locales.map((item) => [item, absoluteUrl(localePrivacyPath(item))]),
+  );
+  languages["x-default"] = absoluteUrl(localePrivacyPath("es"));
+
   return {
+    metadataBase: new URL(SITE_URL),
     title: dict.privacy.title,
     description: dict.privacy.description,
+    alternates: {
+      canonical: path,
+      languages,
+    },
   };
 }
 

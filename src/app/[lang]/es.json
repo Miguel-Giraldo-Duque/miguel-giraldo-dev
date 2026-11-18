@@ -1,7 +1,9 @@
 {
   "meta": {
-    "title": "Portafolio",
-    "description": "Portfolio de Miguel Angel Giraldo Duque, desarrollador Full Stack y diseñador UX/UI. Proyectos, reseñas y contacto."
+    "title": "Miguel Angel Giraldo Duque | Full Stack → Forward Deployed AI Engineer",
+    "description": "Full Stack (Next.js/TypeScript) en Buenos Aires. Abierto a roles Forward Deployed Engineer, Applied AI Engineer y Full-stack AI Engineer remoto LatAm/internacional. Proyectos Qnow, BTZ y más.",
+    "ogTitle": "Miguel Angel Giraldo Duque — Full Stack / Forward Deployed AI Engineer",
+    "ogDescription": "Portfolio de Miguel Angel Giraldo Duque: Full Stack con entrega al cliente (Qnow, BTZ), Next.js/TypeScript, y foco en roles FDE / Applied AI remotos."
   },
   "locale": {
     "label": "Idioma"
@@ -10,12 +12,13 @@
     "label": "Secciones",
     "work": "Proyectos",
     "reviews": "Reseñas",
+    "faq": "FAQ",
     "contact": "Contacto"
   },
   "hero": {
     "before": "Nacido en Colombia y radicado en Buenos Aires, Argentina, soy",
-    "highlight": "desarrollador Full Stack con +4 años de experiencia y +2 como diseñador UX/UI",
-    "after": ". Uno ingeniería y diseño para armar productos de punta a punta —de la interfaz y la lógica de negocio a la integración y el deploy— en e-commerce de moda sostenible y también en computación cuántica y minería de conocimiento en"
+    "highlight": "desarrollador Full Stack (Next.js / TypeScript) con +4 años de experiencia y +2 como diseñador UX/UI, orientado a roles Forward Deployed / Applied AI Engineer",
+    "after": ". Uno ingeniería, diseño y entrega con stakeholders —de la interfaz y la lógica de negocio a la integración y el deploy— en e-commerce de moda sostenible y en computación cuántica y minería de conocimiento en"
   },
   "projects": {
     "kicker": "Proyectos",
@@ -37,10 +40,37 @@
     "of": "de",
     "live": "{author}, {current} de {count}"
   },
+  "faq": {
+    "kicker": "FAQ",
+    "title": "Preguntas que suelen hacer reclutadores",
+    "lead": "Respuestas cortas y citables, alineadas con lo que ya está en este sitio.",
+    "items": [
+      {
+        "question": "¿Quién es Miguel Angel Giraldo Duque?",
+        "answer": "Miguel Angel Giraldo Duque es un desarrollador Full Stack (Next.js / TypeScript) nacido en Colombia y radicado en Buenos Aires, Argentina. Combina ingeniería y diseño UX/UI y entrega productos de punta a punta con stakeholders, con trabajo público en Qnow y BTZ Sport."
+      },
+      {
+        "question": "¿A qué roles se postula?",
+        "answer": "Está orientado a roles Forward Deployed Engineer (FDE), Applied AI Engineer y Full-stack AI Engineer, de preferencia remotos internacionales o LatAm, y también oportunidades en Buenos Aires. No usa el título FDE como cargo actual: es el foco de búsqueda."
+      },
+      {
+        "question": "¿Qué stack y prácticas muestra este portfolio?",
+        "answer": "En proyectos y skills del sitio aparecen React, TypeScript, Next.js, Node.js, UX/UI, Cypress, Vitest, GraphQL, Shopify y Three.js. Qnow Space incluye visualización de grafo de conocimiento; una reseña de Mariano Caruso menciona programación de agentes inteligentes junto con Full Stack y UX."
+      },
+      {
+        "question": "¿Qué resultado concreto destaca en UDA?",
+        "answer": "Como Frontend Lead en Qnow, Miguel ayudó a lanzar UDA, un sistema automático de revisión de pagos. El copy del sitio indica que procesa más de 10.000 transacciones y bajó un 80% los costos operativos del cliente. El proyecto es privado (sin URL pública)."
+      },
+      {
+        "question": "¿Cómo contactarlo?",
+        "answer": "Por el formulario de contacto en este sitio, LinkedIn o GitHub (enlazados en el hero), o el email hola@miguelgd.com. El nivel de inglés aún no está declarado en el sitio (TODO para Miguel)."
+      }
+    ]
+  },
   "contact": {
     "kicker": "Contacto",
-    "title": "¿Querés hablar de un proyecto?",
-    "lead": "Armo landing pages para negocios locales: rápidas, con un precio claro, y listas para que te encuentren las personas y los buscadores con IA (GEO/AEO).",
+    "title": "¿Hablamos de un rol o de un producto?",
+    "lead": "Prioridad: roles Forward Deployed / Applied AI Engineer y equipos que necesiten Full Stack con entrega al cliente. También respondo consultas de producto —sin precios de landings locales.",
     "fullName": "Nombre completo",
     "company": "Compañía",
     "email": "Email",
@@ -85,7 +115,7 @@
     "dataSensitive": "No se piden datos sensibles según el artículo 2 de la Ley 25.326 (por ejemplo salud, opiniones políticas o creencias). Si los incluís en el mensaje, no hace falta: con el nombre, el email y el proyecto alcanza para responder.",
     "dataHoneypot": "Hay un campo oculto que las personas no completan. Sirve para filtrar envíos automáticos. Si viene con texto, el mensaje se descarta.",
     "purposeTitle": "Para qué se usan",
-    "purpose": "La única finalidad es responder tu consulta y, si corresponde, preparar un presupuesto de una landing u otro trabajo que me pidas. No vendo estos datos ni los uso para publicidad de terceros.",
+    "purpose": "La única finalidad es responder tu consulta —por ejemplo de reclutamiento, de un rol, o de un producto— y, si corresponde, coordinar el siguiente paso. No vendo estos datos ni los uso para publicidad de terceros.",
     "consent": "La base es tu consentimiento, que das al marcar la casilla del formulario. Sin ese consentimiento el mensaje no se envía. Si no querés dejar estos datos, podés escribirme por LinkedIn, que está enlazado en la página de inicio.",
     "retentionTitle": "Cuánto tiempo se conservan",
     "retention": "Se conservan el tiempo necesario para responder y hacer el seguimiento de esa consulta, con un plazo orientativo de 24 meses desde el último mensaje, salvo que pidas la supresión antes o que una norma exija guardarlos más tiempo.",
