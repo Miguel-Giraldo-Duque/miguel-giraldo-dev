@@ -8,16 +8,17 @@ export function Faq({ dict }) {
         {dict.title}
       </h2>
       <p className="faq__lead">{dict.lead}</p>
-      <dl className="faq__list">
+      <div className="faq__list">
         {dict.items.map((item) => (
-          <div key={item.question} className="faq__item">
-            <dt>
-              <h3>{item.question}</h3>
-            </dt>
-            <dd>{item.answer}</dd>
-          </div>
+          <details key={item.question} className="faq__item">
+            <summary className="faq__summary">
+              <span className="faq__question">{item.question}</span>
+              <span className="faq__chevron" aria-hidden="true" />
+            </summary>
+            <p className="faq__answer">{item.answer}</p>
+          </details>
         ))}
-      </dl>
+      </div>
     </section>
   );
 }
