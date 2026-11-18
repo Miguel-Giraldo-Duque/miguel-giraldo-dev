@@ -77,7 +77,8 @@ export function Reviews({ dict }) {
 
     const id = window.setInterval(onAutoplayTick, AUTOPLAY_MS);
     return () => window.clearInterval(id);
-    // onAutoplayTick is an Effect Event: always sees latest paused/index without re-binding.
+    // Effect Event: keep one timer; onAutoplayTick always reads latest paused state.
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- useEffectEvent is intentionally omitted
   }, []);
 
   return (
