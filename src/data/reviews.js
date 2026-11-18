@@ -45,4 +45,16 @@ export const reviews = [
       "Miguel es una persona proactiva, que hace propuestas coherentes e investiga para buscar apoyarse para tener fundamentos del desarrollo de los proyectos.",
     ],
   },
+  {
+    id: "andres-giraldo",
+    author: "Andrés Giraldo",
+    role: "",
+    // TODO(Miguel): add profile URL if Andrés wants a public link on the tag.
+    profileUrl: null,
+    image: "/reviews/andres-giraldo.jpg",
+    messages: [
+      "Recomiendo ampliamente a Miguel Ángel por su excelente desempeño profesional. Durante el desarrollo del proyecto y la ejecución del contrato, su trabajo fue altamente satisfactorio, destacándose por su responsabilidad, puntualidad en el cumplimiento de los plazos de entrega y agilidad en la identificación y resolución de problemas. Asimismo, demostró una gran capacidad para aportar ideas innovadoras y creativas enriqueciendo el proyecto con sus conocimientos y propuestas. Sin duda, Miguel Ángel es un profesional comprometido, proactivo y con grandes capacidades.",
+    ],
+  },
 ];
+
