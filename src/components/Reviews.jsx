@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useEffectEvent, useState } from "react";
 import { reviews } from "@/data/reviews";
+
+const AUTOPLAY_MS = 7000;
 
 function creditFor(review) {
   return [review.role, review.source].filter(Boolean).join(" · ");
@@ -55,6 +57,7 @@ function Avatar({ review }) {
 
 export function Reviews({ dict }) {
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
   const count = reviews.length;
   const current = reviews[index];
 
@@ -62,12 +65,29 @@ export function Reviews({ dict }) {
     setIndex((value) => (value + step + count) % count);
   }
 
+  const onAutoplayTick = useEffectEvent(() => {
+    if (paused) return;
+    if (typeof document !== "undefined" && document.visibilityState === "hidden") return;
+    go(1);
+  });
+
+  useEffect(() => {
+    if (typeof window === "undefined") return undefined;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+
+    const id = window.setInterval(onAutoplayTick, AUTOPLAY_MS);
+    return () => window.clearInterval(id);
+    // onAutoplayTick is an Effect Event: always sees latest paused/index without re-binding.
+  }, []);
+
   return (
     <section
       className="reviews"
       id="reviews"
       aria-labelledby="reviews-title"
       aria-roledescription="carousel"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
       onKeyDown={(event) => {
         if (event.key === "ArrowLeft") {
           event.preventDefault();
