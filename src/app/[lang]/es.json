@@ -99,6 +99,25 @@
       "network": "No pude enviar el mensaje. Revisá tu conexión e intentá de nuevo."
     }
   },
+  "ask": {
+    "title": "Asistente",
+    "open": "Abrir asistente",
+    "close": "Cerrar asistente",
+    "welcome": "Hola. Puedo contarte el perfil de Miguel o ayudarte a agendar una llamada. ¿Qué necesitás?",
+    "placeholder": "Escribí tu pregunta…",
+    "send": "Enviar",
+    "thinking": "El asistente está escribiendo",
+    "slotsLabel": "Horarios disponibles",
+    "booked": "Reservado",
+    "errors": {
+      "empty": "Escribí un mensaje para continuar.",
+      "unavailable": "El asistente no está disponible por ahora.",
+      "timeout": "Tardó demasiado. Probá de nuevo.",
+      "upstream": "No pude obtener una respuesta. Intentá de nuevo.",
+      "invalid_response": "La respuesta no se pudo leer. Intentá de nuevo.",
+      "network": "Problema de conexión. Revisá tu red e intentá de nuevo."
+    }
+  },
   "privacy": {
     "title": "Política de privacidad",
     "description": "Cómo se tratan los datos del formulario de contacto de Miguel Angel Giraldo Duque.",

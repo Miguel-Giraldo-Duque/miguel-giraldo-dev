@@ -71,6 +71,19 @@ Port `465` turns on implicit TLS (`secure: true`). Any other port, including `58
 
 The Nodemailer sender sends the HTML rendered from the same React Email component plus the plain-text version. It does not call Resend.
 
+## Ask assistant
+
+The floating chat widget calls a Next.js Server Action (`askAgent` in `src/app/actions/ask.js`). That action is the only place that talks to the upstream FastAPI `POST /ask` service. The browser never sees the Ask base URL or API key.
+
+Copy these into `.env.local` (or Vercel env) when the backend is ready:
+
+```bash
+ASK_API_URL=https://your-ask-api.example.com
+ASK_API_KEY=
+```
+
+`ASK_API_URL` is required for real replies. `ASK_API_KEY` is optional; when set, it is sent as `X-API-Key`. If `ASK_API_URL` is empty, the chat stays usable and shows an “unavailable” message instead of crashing.
+
 ## Notes
 
 A separate note on using ConvertFlow for a first popup or quiz is in [docs/funnel-evaluation.md](docs/funnel-evaluation.md). It is research only. The script is not installed.

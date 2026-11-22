@@ -1,5 +1,6 @@
 import { Raleway } from "next/font/google";
 import { notFound } from "next/navigation";
+import { AskAssistant } from "@/components/AskAssistant";
 import { LocaleSwitch } from "@/components/LocaleSwitch";
 import { absoluteUrl, localeHomePath, SITE_URL } from "@/lib/site";
 import { locales } from "@/lib/locale";
@@ -79,6 +80,7 @@ export default async function RootLayout({ children, params }) {
     <html lang={lang} className={raleway.variable}>
       <body>
         {children}
+        <AskAssistant dict={dict.ask} locale={lang} />
         <LocaleSwitch label={dict.locale.label} />
       </body>
     </html>

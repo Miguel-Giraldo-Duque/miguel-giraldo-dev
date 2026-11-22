@@ -99,6 +99,25 @@
       "network": "I couldn’t send the message. Check your connection and try again."
     }
   },
+  "ask": {
+    "title": "Assistant",
+    "open": "Open assistant",
+    "close": "Close assistant",
+    "welcome": "Hi. I can tell you about Miguel’s profile or help you book a call. What do you need?",
+    "placeholder": "Type your question…",
+    "send": "Send",
+    "thinking": "Assistant is typing",
+    "slotsLabel": "Available times",
+    "booked": "Booked",
+    "errors": {
+      "empty": "Type a message to continue.",
+      "unavailable": "The assistant is unavailable right now.",
+      "timeout": "That took too long. Please try again.",
+      "upstream": "Could not get a reply. Please try again.",
+      "invalid_response": "The reply could not be read. Please try again.",
+      "network": "Connection problem. Check your network and try again."
+    }
+  },
   "privacy": {
     "title": "Privacy policy",
     "description": "How the contact form on Miguel Angel Giraldo Duque’s site handles personal data.",
